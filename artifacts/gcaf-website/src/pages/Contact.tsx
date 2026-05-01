@@ -21,19 +21,39 @@ export default function Contact() {
       />
 
       <Section>
-        <div className="grid md:grid-cols-3 gap-8 mb-12">
-          {[
-            { icon: Mail, title: 'Email', detail: 'hello@gcaf.org', sub: 'We respond within 48 hours' },
-            { icon: MapPin, title: 'Location', detail: 'Global Operations', sub: 'Programs across 50+ countries' },
-            { icon: Clock, title: 'Availability', detail: 'Mon–Fri, 9am–5pm UTC', sub: 'For urgent matters, email us' },
-          ].map((item, idx) => (
-            <div key={idx} className="bg-slate-900/50 border border-slate-800 rounded-xl p-6 text-center hover:border-teal-700/40 transition">
-              <item.icon className="w-8 h-8 text-teal-400 mx-auto mb-3" />
-              <h3 className="font-bold mb-1">{item.title}</h3>
-              <p className="text-teal-400 font-medium text-sm mb-1">{item.detail}</p>
-              <p className="text-slate-500 text-xs">{item.sub}</p>
+        <div className="grid md:grid-cols-3 gap-6 mb-12">
+          {/* Email */}
+          <div className="bg-slate-900/50 border border-slate-800 rounded-2xl p-6 hover:border-teal-700/40 transition group">
+            <div className="w-12 h-12 rounded-xl bg-teal-950/60 border border-teal-800/30 flex items-center justify-center mb-4 group-hover:border-teal-600/40 transition">
+              <Mail className="w-5 h-5 text-teal-400" />
             </div>
-          ))}
+            <h3 className="font-bold text-slate-200 mb-1">Email Us</h3>
+            <a href="mailto:hello@globalcodeaccess.com" className="text-teal-400 hover:text-teal-300 font-medium text-sm break-all transition">hello@globalcodeaccess.com</a>
+            <p className="text-slate-500 text-xs mt-1">We respond within 48 hours</p>
+          </div>
+
+          {/* Address */}
+          <div className="bg-slate-900/50 border border-slate-800 rounded-2xl p-6 hover:border-teal-700/40 transition group">
+            <div className="w-12 h-12 rounded-xl bg-teal-950/60 border border-teal-800/30 flex items-center justify-center mb-4 group-hover:border-teal-600/40 transition">
+              <MapPin className="w-5 h-5 text-teal-400" />
+            </div>
+            <h3 className="font-bold text-slate-200 mb-1">Our Office</h3>
+            <address className="not-italic text-sm text-slate-400 leading-relaxed">
+              Borak Zahir Tower<br />
+              1 Kazi Nazrul Islam Ave<br />
+              Dhaka 1215, Bangladesh
+            </address>
+          </div>
+
+          {/* Availability */}
+          <div className="bg-slate-900/50 border border-slate-800 rounded-2xl p-6 hover:border-teal-700/40 transition group">
+            <div className="w-12 h-12 rounded-xl bg-teal-950/60 border border-teal-800/30 flex items-center justify-center mb-4 group-hover:border-teal-600/40 transition">
+              <Clock className="w-5 h-5 text-teal-400" />
+            </div>
+            <h3 className="font-bold text-slate-200 mb-1">Availability</h3>
+            <p className="text-teal-400 font-medium text-sm">Mon–Fri, 9am–5pm UTC</p>
+            <p className="text-slate-500 text-xs mt-1">For urgent matters, email us directly</p>
+          </div>
         </div>
       </Section>
 
