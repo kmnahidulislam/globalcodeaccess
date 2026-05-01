@@ -34,7 +34,7 @@ export default function Privacy() {
             },
             {
               title: '5. Your Rights',
-              content: `Depending on your location, you may have the following rights regarding your personal information:\n\n- The right to access the personal information we hold about you\n- The right to request correction of inaccurate information\n- The right to request deletion of your personal information\n- The right to opt out of communications\n- The right to data portability\n\nTo exercise any of these rights, please contact us at hello@gcaf.org.`,
+              content: `Depending on your location, you may have the following rights regarding your personal information:\n\n- The right to access the personal information we hold about you\n- The right to request correction of inaccurate information\n- The right to request deletion of your personal information\n- The right to opt out of communications\n- The right to data portability\n\nTo exercise any of these rights, please contact us at hello@globalcodeaccess.com.`,
             },
             {
               title: '6. Changes to This Policy',
@@ -42,7 +42,7 @@ export default function Privacy() {
             },
             {
               title: '7. Contact Us',
-              content: `If you have questions about this Privacy Policy or our data practices, please contact us at:\n\nGlobal Code Access Foundation\nEmail: hello@gcaf.org`,
+              content: `If you have questions about this Privacy Policy or our data practices, please contact us at:\n\nGlobal Code Access Foundation\nEmail: hello@globalcodeaccess.com`,
             },
           ].map((section, idx) => (
             <div key={idx} className="mb-8">

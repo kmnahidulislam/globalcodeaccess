@@ -46,7 +46,7 @@ export default function Terms() {
             },
             {
               title: '8. Contact',
-              content: `For questions about these Terms of Use, please contact us at:\n\nGlobal Code Access Foundation\nEmail: hello@gcaf.org`,
+              content: `For questions about these Terms of Use, please contact us at:\n\nGlobal Code Access Foundation\nEmail: hello@globalcodeaccess.com`,
             },
           ].map((section, idx) => (
             <div key={idx} className="mb-8">
