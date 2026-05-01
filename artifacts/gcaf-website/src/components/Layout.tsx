@@ -1,6 +1,6 @@
 import { Link, useLocation } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import { Menu, X, Heart, ArrowUp, Code, BookOpen, Users, Server, Mail, Shield, MapPin, Globe } from 'lucide-react';
+import { Menu, X, Heart, ArrowUp, Users, Mail, Shield, MapPin } from 'lucide-react';
 
 const navLinks = [
   { to: '/', label: 'Home' },
@@ -209,25 +209,19 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               </ul>
             </div>
 
-            {/* Focus Areas */}
+            {/* Mission */}
             <div>
-              <h4 className="text-xs font-semibold uppercase tracking-wider text-slate-300 mb-5">Focus Areas</h4>
-              <ul className="space-y-3">
-                {[
-                  { icon: Code, label: 'Coding Access' },
-                  { icon: BookOpen, label: 'Digital Skills' },
-                  { icon: Users, label: 'Community Building' },
-                  { icon: Globe, label: 'Open Technology' },
-                  { icon: Server, label: 'Infrastructure' },
-                ].map((item, idx) => (
-                  <li key={idx}>
-                    <Link to="/focus-areas" className="inline-flex items-center gap-2 text-sm text-slate-500 hover:text-teal-400 transition-colors group">
-                      <item.icon className="w-3.5 h-3.5 text-slate-600 group-hover:text-teal-500 transition-colors" />
-                      {item.label}
-                    </Link>
-                  </li>
+              <h4 className="text-xs font-semibold uppercase tracking-wider text-slate-300 mb-5">Our Mission</h4>
+              <p className="text-sm text-slate-500 leading-relaxed mb-5">
+                We believe technology access is a human right. Through education, community, and open-source advocacy, we work to close the digital divide worldwide.
+              </p>
+              <div className="flex flex-wrap gap-2">
+                {['Coding Access', 'Digital Skills', 'Community', 'Open Tech'].map((tag, idx) => (
+                  <span key={idx} className="px-2.5 py-1 bg-slate-800/60 border border-slate-700/40 rounded-lg text-xs text-slate-500">
+                    {tag}
+                  </span>
                 ))}
-              </ul>
+              </div>
             </div>
 
             {/* Contact Info */}
