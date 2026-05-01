@@ -6,6 +6,7 @@ const navLinks = [
   { to: '/', label: 'Home' },
   { to: '/about', label: 'About' },
   { to: '/focus-areas', label: 'Focus Areas' },
+  { to: '/team', label: 'Team' },
   { to: '/get-involved', label: 'Get Involved' },
   { to: '/contact', label: 'Contact' },
 ];
@@ -196,6 +197,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                   { label: 'Home', to: '/' },
                   { label: 'About Us', to: '/about' },
                   { label: 'Focus Areas', to: '/focus-areas' },
+                  { label: 'Our Team', to: '/team' },
                   { label: 'Get Involved', to: '/get-involved' },
                   { label: 'Donate', to: '/donate' },
                   { label: 'Contact', to: '/contact' },

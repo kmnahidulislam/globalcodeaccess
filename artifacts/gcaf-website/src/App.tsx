@@ -7,6 +7,7 @@ import FocusAreas from './pages/FocusAreas';
 import GetInvolved from './pages/GetInvolved';
 import Donate from './pages/Donate';
 import Contact from './pages/Contact';
+import Team from './pages/Team';
 import Privacy from './pages/Privacy';
 import Terms from './pages/Terms';
 
@@ -23,6 +24,7 @@ export default function App() {
           <Route path="/get-involved" element={<GetInvolved />} />
           <Route path="/donate" element={<Donate />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/team" element={<Team />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/terms" element={<Terms />} />
         </Routes>
