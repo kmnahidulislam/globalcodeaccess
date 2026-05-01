@@ -7,25 +7,25 @@ const leadership = [
     name: 'Rafiq Hasan',
     role: 'Executive Director & Co-Founder',
     bio: 'A passionate advocate for digital equity, Rafiq brings over 15 years of experience in nonprofit leadership and technology education across South and Southeast Asia.',
-    photo: 'https://i.pravatar.cc/200?img=11',
+    photo: 'https://randomuser.me/api/portraits/men/32.jpg',
   },
   {
     name: 'Nadia Sultana',
     role: 'Director of Programs',
     bio: 'Nadia oversees GCAF\'s global program portfolio, ensuring coding curricula reach underserved communities across 50+ countries with measurable, lasting impact.',
-    photo: 'https://i.pravatar.cc/200?img=47',
+    photo: 'https://randomuser.me/api/portraits/women/44.jpg',
   },
   {
     name: 'Tariq Ahmed',
     role: 'Chief Technology Officer',
     bio: 'With a background in open-source software engineering, Tariq leads the development of GCAF\'s digital platforms, learning tools, and infrastructure initiatives.',
-    photo: 'https://i.pravatar.cc/200?img=15',
+    photo: 'https://randomuser.me/api/portraits/men/41.jpg',
   },
   {
     name: 'Priya Sharma',
     role: 'Director of Partnerships',
     bio: 'Priya builds and maintains GCAF\'s network of corporate, academic, and government partners, driving funding and volunteer engagement across South Asia and beyond.',
-    photo: 'https://i.pravatar.cc/200?img=44',
+    photo: 'https://randomuser.me/api/portraits/women/68.jpg',
   },
 ];
 
@@ -34,25 +34,25 @@ const advisors = [
     name: 'Dr. Amina Khatun',
     role: 'Academic Advisor',
     affiliation: 'BUET — Bangladesh University of Engineering & Technology',
-    photo: 'https://i.pravatar.cc/200?img=32',
+    photo: 'https://randomuser.me/api/portraits/women/57.jpg',
   },
   {
     name: 'James O\'Brien',
     role: 'Technology Advisor',
     affiliation: 'Former VP Engineering, Global Fintech Group',
-    photo: 'https://i.pravatar.cc/200?img=53',
+    photo: 'https://randomuser.me/api/portraits/men/52.jpg',
   },
   {
     name: 'Mei-Ling Chen',
     role: 'Education Advisor',
     affiliation: 'UNESCO Digital Skills Programme',
-    photo: 'https://i.pravatar.cc/200?img=25',
+    photo: 'https://randomuser.me/api/portraits/women/22.jpg',
   },
   {
     name: 'Samuel Owusu',
     role: 'Community Advisor',
     affiliation: 'Pan-African Digital Inclusion Network',
-    photo: 'https://i.pravatar.cc/200?img=68',
+    photo: 'https://randomuser.me/api/portraits/men/75.jpg',
   },
 ];
 
@@ -104,11 +104,11 @@ export default function Team() {
               key={idx}
               className="bg-slate-900/50 border border-slate-800 rounded-2xl p-6 flex flex-col hover:border-teal-700/40 transition-all duration-300 group"
             >
-              <div className="w-20 h-20 rounded-2xl overflow-hidden mb-5 ring-2 ring-slate-700/50 group-hover:ring-teal-600/40 transition-all">
+              <div className="w-24 h-32 rounded-lg overflow-hidden mb-5 ring-2 ring-slate-700/50 group-hover:ring-teal-600/40 transition-all shadow-lg shadow-slate-950/40">
                 <img
                   src={member.photo}
                   alt={member.name}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
               <h3 className="font-bold text-white text-base mb-0.5">{member.name}</h3>
@@ -137,11 +137,11 @@ export default function Team() {
               key={idx}
               className="bg-slate-900/60 border border-slate-800/60 rounded-2xl p-5 flex flex-col hover:border-teal-700/30 transition-all duration-300 group"
             >
-              <div className="w-16 h-16 rounded-xl overflow-hidden mb-4 ring-2 ring-slate-700/40 group-hover:ring-teal-600/30 transition-all">
+              <div className="w-20 h-28 rounded-md overflow-hidden mb-4 ring-2 ring-slate-700/40 group-hover:ring-teal-600/30 transition-all shadow-md shadow-slate-950/40">
                 <img
                   src={advisor.photo}
                   alt={advisor.name}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
               <h3 className="font-bold text-white text-sm mb-0.5">{advisor.name}</h3>
