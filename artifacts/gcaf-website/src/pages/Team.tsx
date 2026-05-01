@@ -1,4 +1,4 @@
-import { Users, Linkedin, Mail, Globe } from 'lucide-react';
+import { Users, Globe } from 'lucide-react';
 import PageHero from '../components/PageHero';
 import Section from '../components/Section';
 
@@ -7,29 +7,25 @@ const leadership = [
     name: 'Rafiq Hasan',
     role: 'Executive Director & Co-Founder',
     bio: 'A passionate advocate for digital equity, Rafiq brings over 15 years of experience in nonprofit leadership and technology education across South and Southeast Asia.',
-    initials: 'RH',
-    color: 'from-teal-600 to-cyan-600',
+    photo: 'https://i.pravatar.cc/200?img=11',
   },
   {
     name: 'Nadia Sultana',
     role: 'Director of Programs',
     bio: 'Nadia oversees GCAF\'s global program portfolio, ensuring coding curricula reach underserved communities across 50+ countries with measurable, lasting impact.',
-    initials: 'NS',
-    color: 'from-cyan-600 to-blue-600',
+    photo: 'https://i.pravatar.cc/200?img=47',
   },
   {
     name: 'Tariq Ahmed',
     role: 'Chief Technology Officer',
     bio: 'With a background in open-source software engineering, Tariq leads the development of GCAF\'s digital platforms, learning tools, and infrastructure initiatives.',
-    initials: 'TA',
-    color: 'from-blue-600 to-indigo-600',
+    photo: 'https://i.pravatar.cc/200?img=15',
   },
   {
     name: 'Priya Sharma',
     role: 'Director of Partnerships',
     bio: 'Priya builds and maintains GCAF\'s network of corporate, academic, and government partners, driving funding and volunteer engagement across South Asia and beyond.',
-    initials: 'PS',
-    color: 'from-indigo-600 to-violet-600',
+    photo: 'https://i.pravatar.cc/200?img=44',
   },
 ];
 
@@ -38,29 +34,25 @@ const advisors = [
     name: 'Dr. Amina Khatun',
     role: 'Academic Advisor',
     affiliation: 'BUET — Bangladesh University of Engineering & Technology',
-    initials: 'AK',
-    color: 'from-teal-700 to-teal-500',
+    photo: 'https://i.pravatar.cc/200?img=32',
   },
   {
     name: 'James O\'Brien',
     role: 'Technology Advisor',
     affiliation: 'Former VP Engineering, Global Fintech Group',
-    initials: 'JO',
-    color: 'from-cyan-700 to-cyan-500',
+    photo: 'https://i.pravatar.cc/200?img=53',
   },
   {
     name: 'Mei-Ling Chen',
     role: 'Education Advisor',
     affiliation: 'UNESCO Digital Skills Programme',
-    initials: 'MC',
-    color: 'from-blue-700 to-blue-500',
+    photo: 'https://i.pravatar.cc/200?img=25',
   },
   {
     name: 'Samuel Owusu',
     role: 'Community Advisor',
     affiliation: 'Pan-African Digital Inclusion Network',
-    initials: 'SO',
-    color: 'from-indigo-700 to-indigo-500',
+    photo: 'https://i.pravatar.cc/200?img=68',
   },
 ];
 
@@ -112,23 +104,16 @@ export default function Team() {
               key={idx}
               className="bg-slate-900/50 border border-slate-800 rounded-2xl p-6 flex flex-col hover:border-teal-700/40 transition-all duration-300 group"
             >
-              {/* Avatar */}
-              <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${member.color} flex items-center justify-center text-white font-bold text-xl mb-5 shadow-lg group-hover:scale-105 transition-transform`}>
-                {member.initials}
+              <div className="w-20 h-20 rounded-2xl overflow-hidden mb-5 ring-2 ring-slate-700/50 group-hover:ring-teal-600/40 transition-all">
+                <img
+                  src={member.photo}
+                  alt={member.name}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                />
               </div>
-
               <h3 className="font-bold text-white text-base mb-0.5">{member.name}</h3>
               <p className="text-teal-400 text-xs font-medium mb-3">{member.role}</p>
-              <p className="text-slate-500 text-xs leading-relaxed flex-1">{member.bio}</p>
-
-              <div className="flex items-center gap-2 mt-5 pt-4 border-t border-slate-800/60">
-                <button className="w-7 h-7 rounded-lg bg-slate-800/60 border border-slate-700/40 flex items-center justify-center text-slate-500 hover:text-teal-400 hover:border-teal-500/30 transition-all">
-                  <Linkedin className="w-3.5 h-3.5" />
-                </button>
-                <button className="w-7 h-7 rounded-lg bg-slate-800/60 border border-slate-700/40 flex items-center justify-center text-slate-500 hover:text-teal-400 hover:border-teal-500/30 transition-all">
-                  <Mail className="w-3.5 h-3.5" />
-                </button>
-              </div>
+              <p className="text-slate-500 text-xs leading-relaxed">{member.bio}</p>
             </div>
           ))}
         </div>
@@ -152,8 +137,12 @@ export default function Team() {
               key={idx}
               className="bg-slate-900/60 border border-slate-800/60 rounded-2xl p-5 flex flex-col hover:border-teal-700/30 transition-all duration-300 group"
             >
-              <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${advisor.color} flex items-center justify-center text-white font-bold text-sm mb-4 group-hover:scale-105 transition-transform`}>
-                {advisor.initials}
+              <div className="w-16 h-16 rounded-xl overflow-hidden mb-4 ring-2 ring-slate-700/40 group-hover:ring-teal-600/30 transition-all">
+                <img
+                  src={advisor.photo}
+                  alt={advisor.name}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                />
               </div>
               <h3 className="font-bold text-white text-sm mb-0.5">{advisor.name}</h3>
               <p className="text-teal-400 text-xs font-medium mb-2">{advisor.role}</p>
@@ -186,7 +175,7 @@ export default function Team() {
                 href="mailto:hello@globalcodeaccess.com"
                 className="inline-flex items-center gap-2 px-7 py-3 bg-slate-800/80 border border-slate-700/50 text-slate-300 hover:text-white hover:border-teal-500/40 font-medium rounded-xl transition-all"
               >
-                <Mail className="w-4 h-4" /> hello@globalcodeaccess.com
+                hello@globalcodeaccess.com
               </a>
             </div>
           </div>
