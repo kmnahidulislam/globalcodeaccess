@@ -1,0 +1,8 @@
+[build]
+  command = "pnpm --filter @workspace/gcaf-website... run build"
+  publish = "artifacts/gcaf-website/dist/public"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
