@@ -44,7 +44,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               <img
                 src="/logo-gcaf.png"
                 alt="Global Code Access Foundation"
-                className="h-16 sm:h-20 md:h-24 w-auto object-contain filter drop-shadow-sm group-hover:drop-shadow-md transition-all"
+                className="h-10 sm:h-12 w-auto object-contain filter drop-shadow-sm group-hover:drop-shadow-md transition-all"
               />
             </Link>
 
